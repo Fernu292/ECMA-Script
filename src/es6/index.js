@@ -93,3 +93,109 @@ const array = ['nombre', 'edad'];
 
 const [Nombre, Edad] = array;
 console.log(Nombre, Edad);
+
+//Objetos mejorados
+
+let name = 'oscar';
+let age = 32;
+
+//Antes del ES6 con redundancia de propiedades
+obj = { name: name, age: age};
+
+//Con ES6 ahorrando codigo y haciendo facil crear objetos grandes
+obj2 = {name, age};
+
+console.log(obj2);
+
+
+//Array functions 
+//Presentan una solucin practica para ahorrar codigo dentro de una funcion
+
+const names = [
+    {name: 'oscar', age: 32},
+    {name: 'Luis', age:18},
+];
+
+//Funciones comunes antes del ES6 anonimas
+let listOfNames = names.map(function(item){
+    console.log(item.name);
+})
+
+//Usos de las arrow functions con el ES6 siendo mas amigable con
+//Su sintaxis
+let listOfNames2 = names.map( item => console.log(item.name));
+
+//Declaracion de un arroy function 
+const listOfNames3 = (name, age, country)=>{
+    return name, age, country;
+}
+
+//Permite evitar los parentesis al usar un solo parametro
+const names2 = name =>{
+    return name;
+}   
+
+//Funcion con return implicito, hay dos formas de hacerlo, con un ()parentesis 
+//O bien sin poner las llaves
+
+const returnImplicito = (name) => name;
+
+const returnImplicito2 = (name)=>(name);
+
+
+
+//Promesas en JS ES6 
+
+//Antes del ES6 teniamos el problema del callback hell donde se anidaban 
+//Multiples callbacks para poder resolver una tarea asincrona 
+
+//En el ES6 podemos hacelo mucho mas facil y eficiente con promesas 
+
+const miPromesa = ()=>{
+    return new Promise( (resolve, reject)=>{
+        if(true){
+            resolve('Hey! todo ha salido bien');
+        }
+        else{
+            reject('Ocurrio un error');
+        }
+    })
+}
+
+//Ejecucion y manejo de promesas
+miPromesa()
+    .then(Response => console.log(Response))
+    .catch(err => console.log(err));
+
+
+//Clases, permiten la creacion de objetos en base a una plantilla
+//tienen metodos y propiedades bien definidas
+//Fueron agregadad en el ES6
+
+class calculator {
+
+    constructor(){//Constructor para inicializar una clase 
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+
+    //Metodo de suma en la clase 
+    sum(valeA, valueB){
+        this.valueA = valeA;//Asignacion de variables a los datos recibidos
+        this.valueB = valueB;
+
+        return this.valueA+this.valueB;
+    }
+}
+
+const calc = new calculator;
+console.log(calc.sum(4,3));
+
+
+//Tranajo de modulos
+
+//importacion de un modulo
+
+import {hello} from "./modulo";
+
+console.log(hello());
