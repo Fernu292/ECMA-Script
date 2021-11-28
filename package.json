@@ -1,0 +1,23 @@
+{
+  "name": "ecmascrpit",
+  "version": "1.0.0",
+  "description": "ECMAScrpit course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fernu292/ECMA-Script.git"
+  },
+  "keywords": [
+    "ECMA",
+    "Scrpit"
+  ],
+  "author": "Luis Fernando",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fernu292/ECMA-Script/issues"
+  },
+  "homepage": "https://github.com/Fernu292/ECMA-Script#readme"
+}
