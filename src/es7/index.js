@@ -25,3 +25,6 @@ const exponente = 2;
 const resultado = base**exponente;
 
 console.log(`El resultado es: ${resultado}`);
+
+//El primer numero sera la base y usaremos ** para elevarlo a cierto 
+//Exponente
