@@ -65,7 +65,7 @@ const helloAsync = async ()=>{
 
 
 //Una forma mas correcta para trabajar con async await para manejar los 
-//Errores
+//Errores haciendo uso del try catch
 const anotherFunction = async ()=>{
     try{
         const hello = await helloWorld();
