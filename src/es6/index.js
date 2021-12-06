@@ -72,6 +72,7 @@ const array2 = [4,5,6];
 
 const array3 = [...array1,...array2];
 
+
 //Desestructuracion
 
 //La desestructuracion consiste en extraer datos de un objeto o de un
